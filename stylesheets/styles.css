@@ -1,0 +1,26 @@
+* {
+ font-family: Arial;
+}
+
+tr {
+ font-size: 14px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td, li {
+ padding: 5px;
+}
+
+#showForm, #addData, #done {
+ padding: 5px;
+ margin-top: 10px;
+}
+
+ul {
+ list-style: none;
+}
+
