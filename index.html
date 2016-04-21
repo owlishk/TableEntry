@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">	
+    <script   src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <title>Tracking Decibel Readings</title>  
+    <!-- link to an external style sheet (best practice with style sheet)-->
+    <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <header>
+      <h1>Date, Time, Location (GPS) and decibel reading</h1>
+    </header>
+    
+<!--Page 1: Table-->
+   
+    <table id="sound-data" class="table">
+     <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>GPS lat</th>
+        <th>GPS long</th>
+        <th>dB Reading</th>
+        <th>Comment</th>
+      </tr>
+     </thead>
+     
+     <tbody>    
+      <tr>
+         <!--Using fake data for first line-->
+         <td>April 20 2016</td>
+         <td>12:56 PM</td>
+         <td>47.6062095</td>
+         <td>-122.3320708</td>
+         <td>87 dB</td>
+         <td>Construction nearby</td>
+      </tr>
+
+     </tbody>
+    </table>
+   
+   
+<!--   adding new items:-->
+   <button id="showForm">Add Data to Table</button>
+ 
+<!--Page 2: Form with properties of object. Initially hidden-->
+   <code id="FormSection">
+    <script>$("#FormSection").hide();</script>
+    <h1>New Decibel Reading</h1>
+    
+    <form id="form">
+     <ul>
+      <li>
+       <label for="date">Date</label>
+       <input type="date" id="date" />
+      </li>
+      <li>
+       <label for="time">Time</label>
+       <input type="time" id="time" />
+      </li>
+      <li>
+       <label for="lat">GPS Latitude</label>
+       <input type="number" id="lat" step="0.0000001"/>
+      </li>
+      <li>
+       <label for="long">GPS Longitude</label>
+       <input type="number" id="long" step="0.00000001"/>
+      </li>
+      <li>
+       <label for="db">Decibel Reading</label>
+       <input type="number" id="db" />
+      </li>
+      <li>
+       <label for="comment">Comments</label>
+       <input type="text" id="comment" />
+      </li>
+     </ul>
+    </form>
+    
+    <button id="addData">Add dB Reading to Table</button><br>
+    <button id="done">Data Entry Complete</button>
+   </code>   
+   
+   
+    <script src="js/javascript.js" type="text/javascript"></script>
+
+  </body>
+</html>
